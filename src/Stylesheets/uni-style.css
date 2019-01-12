@@ -43,7 +43,7 @@ li a:hover{
 
 footer {
   grid-area:foot;
-  background-color: #f2b632;
+  background-color: #fff;
   height: auto;
   margin-top: 0;
   font-family: 'Text Me One';
@@ -65,14 +65,16 @@ footer {
 .foot-icon{
   margin-left: .2em;
   margin-right: .2em;
-  color:#252839;
+  color:#ddd;
 }
+
 .copyright{
   text-align: center;
-  padding-bottom: 3em;
+  padding-bottom: 1em;
   font-size: 1.2em;
   justify-content: center;
-  background-color: #f2b632;
+  background-color: #fff;
+  color: #ddd;
 }
 
 .intro{
@@ -308,6 +310,11 @@ h4 {
   grid-area: edu-r2;
   margin-top: 1em;
   padding-bottom: 3em;
+}
+
+.relate-course {
+  color: #f2b632;
+  font-weight: 500;
 }
 
 .wrapper-intern {
@@ -853,6 +860,45 @@ tr:nth-child(even) {
     flex-wrap: nowrap;
   }
 
+  /*---Add side nav for project page---*/
+  .project {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .project-sidebar {
+    position: fixed;
+    cursor: pointer;
+    padding-top: 5em;
+    padding-left: 3em;
+  }
+
+  .project-sidebar h2 {
+    font-family: "Yanone Kaffeesatz";
+    font-size: 1.5em;
+  }
+
+  .project-sidebar p {
+    font-family: "Yanone Kaffeesatz";
+    font-size: 1em;
+    line-height: 100%;
+  }
+
+  .project-content {
+    margin-left: 20%;
+  }
+
+  /*--------------------------------------Project Page-------------------------------------------*/
+  .jumbotron {
+  background-color: #fff;
+  padding: 4rem 2rem;
+  border-top: 1px solid rgba(0,0,0,.1);
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  }
+
+  .bg-light {
+  background-color: #fff!important;
+  }
 }
 
 @media (min-width: 70em){
