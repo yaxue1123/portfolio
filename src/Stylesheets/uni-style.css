@@ -451,7 +451,7 @@ body {
   margin: auto;
 }
 
-.mySlides {
+.slides {
     display: none;
     width: 100%;
 }
@@ -646,6 +646,7 @@ button{
     text-align: left;
     grid-template-areas:
       'nav nav nav nav nav nav nav nav nav nav nav'
+      '.. int-l5 int-l5 int-r5 int-r5 int-r5 int-r5 int-r5 int-r5 int-r5 ..'
       '.. int-l1 int-l1 int-r1 int-r1 int-r1 int-r1 int-r1 int-r1 int-r1 ..'
       '.. int-l2 int-l2 int-r2 int-r2 int-r2 int-r2 int-r2 int-r2 int-r2 ..'
       '.. int-l3 int-l3 int-r3 int-r3 int-r3 int-r3 int-r3 int-r3 int-r3 ..'
@@ -653,6 +654,19 @@ button{
       'foot foot foot foot foot foot foot foot foot foot foot';
   }
 
+  .int-l5 {
+    grid-area: int-l5;
+    margin-top: 3em;
+  
+  }
+  .int-r5 {
+    grid-area: int-r5;
+    margin-left: 1em;
+    margin-top: 2em;
+    padding-bottom: 3em;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+  
+  }
 
   .int-l1 {
     grid-area: int-l1;
@@ -757,10 +771,24 @@ button{
   
 }
 
+table {
+  font-family: 'Courier New', Courier, monospace;
+  width: 80%;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid #A2AAAD;
+  text-align: center;
+  padding: .5em;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(240, 240, 240);
+}
 
 @media (min-width: 60em)
 {
-
   body{
     font-size: 100%;
     line-height: 1.5;
