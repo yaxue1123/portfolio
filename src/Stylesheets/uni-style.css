@@ -6,6 +6,10 @@ header {
   font-family: 'Text Me One';
 }
 
+.project-sidebar {
+  display: none;
+}
+
 .navitems{
   width: 100%;
   top: 0;
@@ -39,11 +43,12 @@ a
 
 li a:hover{
   color: #fff;
+  text-decoration: none;
 }
 
 footer {
   grid-area:foot;
-  background-color: #fff;
+  background-color: #f2b632;
   height: auto;
   margin-top: 0;
   font-family: 'Text Me One';
@@ -65,16 +70,14 @@ footer {
 .foot-icon{
   margin-left: .2em;
   margin-right: .2em;
-  color:#ddd;
+  color:#252839;
 }
-
 .copyright{
   text-align: center;
-  padding-bottom: 1em;
+  padding-bottom: 3em;
   font-size: 1.2em;
   justify-content: center;
-  background-color: #fff;
-  color: #ddd;
+  background-color: #f2b632;
 }
 
 .intro{
@@ -147,7 +150,7 @@ p{
 
 .sk-img:hover{
   opacity: .8;
-  transform: scale(1.2);
+  transform: scale(1.0000000001);
 }
 
 .sk-1, .sk-2{
@@ -323,6 +326,8 @@ h4 {
   background-color:#fff;
   text-align: center;
   grid-template-areas:
+    '.. int-l5 int-l5 int-l5 int-l5 int-l5 int-l5 int-l5 int-l5 int-l5 ..'
+    '.. int-r5 int-r5 int-r5 int-r5 int-r5 int-r5 int-r5 int-r5 int-r5 ..'
     '.. int-l1 int-l1 int-l1 int-l1 int-l1 int-l1 int-l1 int-l1 int-l1 ..'
     '.. int-r1 int-r1 int-r1 int-r1 int-r1 int-r1 int-r1 int-r1 int-r1 ..'
     '.. int-l2 int-l2 int-l2 int-l2 int-l2 int-l2 int-l2 int-l2 int-l2 ..'
@@ -335,6 +340,17 @@ h4 {
     margin-top: 45px;
 }
 
+.int-l5 {
+  grid-area: int-l5;
+  margin-top: 2em;
+}
+
+.int-r5 {
+  grid-area: int-r5;
+  margin-top: 1em;
+  padding-bottom: 3em;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
 
 .int-l1 {
   grid-area: int-l1;
@@ -575,6 +591,11 @@ body {
 button{
   outline: none;
 }
+
+button:focus {
+  outline: none;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -647,9 +668,6 @@ button{
   }
   
   .wrapper-intern {
-    display: grid;
-    grid-template-columns:repeat(11, 1fr);
-    background-color:#fff;
     text-align: left;
     grid-template-areas:
       'nav nav nav nav nav nav nav nav nav nav nav'
@@ -661,75 +679,12 @@ button{
       'foot foot foot foot foot foot foot foot foot foot foot';
   }
 
-  .int-l5 {
-    grid-area: int-l5;
-    margin-top: 3em;
-  
-  }
-  .int-r5 {
-    grid-area: int-r5;
+.int-r1, .int-r2, .int-r3, .int-r4, .int-r5{
     margin-left: 1em;
     margin-top: 2em;
-    padding-bottom: 3em;
-    border-bottom: 1px solid rgba(0,0,0,.1);
-  
   }
 
-  .int-l1 {
-    grid-area: int-l1;
-    margin-top: 3em;
-  
-  }
-  .int-r1 {
-    grid-area: int-r1;
-    margin-left: 1em;
-    margin-top: 2em;
-    padding-bottom: 3em;
-    border-bottom: 1px solid rgba(0,0,0,.1);
-  
-  }
-  
-  .int-l2{
-    grid-area: int-l2;
-    margin-top: 3em;
-  }
-  
-  .int-r2{
-    grid-area: int-r2;
-    margin-left: 1em;
-    margin-top: 2em;
-    padding-bottom: 3em;
-    border-bottom: 1px solid rgba(0,0,0,.1);
-  }
-
-  .int-l3 {
-    grid-area: int-l3;
-    margin-top: 3em;
-  }
-
-  .int-r3 {
-    grid-area: int-r3;
-    margin-left: 1em;
-    margin-top: 2em;
-    padding-bottom: 3em;
-  }
-
-  .int-l4{
-    grid-area: int-l4;
-    margin-top: 3em;
-  }
-  
-  .int-r4{
-    grid-area: int-r4;
-    margin-left: 1em;
-    margin-top:2em;
-    padding-bottom: 3em;
-    
-  }
   .wrapper-lead {
-    display: grid;
-    grid-template-columns:repeat(11, 1fr);
-    background-color:#fff;
     text-align: left;
     grid-template-areas:
       'nav nav nav nav nav nav nav nav nav nav nav'
@@ -739,43 +694,12 @@ button{
       'foot foot foot foot foot foot foot foot foot foot foot';
   }
   
-  .lead-l1 {
-    grid-area: lead-l1;
-    margin-top: 3em;
-  
-  }
-  .lead-r1 {
-    grid-area: lead-r1;
-    margin-top: 2em;
-    padding-bottom: 3em;
-    border-bottom: 1px solid rgba(0,0,0,.1);
-  
-  }
-  
-  .lead-l2{
-    grid-area: lead-l2;
-    margin-top: 3em;
-  
-  }
-  
-  .lead-r2{
-    grid-area: lead-r2;
-    margin-top: 2em;
-    padding-bottom: 3em;
-    border-bottom: 1px solid rgba(0,0,0,.1);
-  }
-  .lead-l3{
-    grid-area: lead-l3;
+  .lead-l1, .lead-l2, .lead-l3 {
     margin-top: 3em;
   }
-  
-  .lead-r3{
-    grid-area: lead-r3;
+  .lead-r1, .lead-r2, .lead-r3 {
     margin-top: 2em;
-    padding-bottom: 3em;
-  }
-  
-  
+  }  
 }
 
 table {
@@ -867,25 +791,27 @@ tr:nth-child(even) {
   }
 
   .project-sidebar {
-    position: fixed;
+    display: block;
     cursor: pointer;
-    padding-top: 5em;
-    padding-left: 3em;
+    padding-top: 6%;
+    padding-left: 5%;
   }
 
   .project-sidebar h2 {
-    font-family: "Yanone Kaffeesatz";
+    font-family: "Yantramanav";
     font-size: 1.5em;
   }
 
   .project-sidebar p {
-    font-family: "Yanone Kaffeesatz";
+    font-family: "Yantramanav";
     font-size: 1em;
     line-height: 100%;
+    color: #aaa;
   }
 
   .project-content {
-    margin-left: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
   /*--------------------------------------Project Page-------------------------------------------*/
