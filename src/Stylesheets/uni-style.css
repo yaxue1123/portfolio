@@ -629,6 +629,31 @@ button:focus {
 }
 
 @media (min-width: 54em){
+  /*-------Back to top--------*/
+  #back-to-top {
+    position: fixed;
+    bottom: 50%;
+    right: 2%;
+    z-index: 99;
+    width: 2.5em;
+    height: 2em;
+    text-align: center;
+    line-height: 30px;
+    background: #f5f5f5;
+    color: #444;
+    cursor: pointer;
+    border: 0;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+  }
+  #back-to-top:hover {
+      background: #e9ebec;
+  }
+  #back-to-top.show {
+      opacity: 1;
+  }
 
   .wrapper-edu {
     display: grid;
@@ -792,6 +817,7 @@ tr:nth-child(even) {
 
   .project-sidebar {
     display: block;
+    /* position: fixed; */
     cursor: pointer;
     padding-top: 6%;
     padding-left: 5%;
@@ -802,11 +828,19 @@ tr:nth-child(even) {
     font-size: 1.5em;
   }
 
+  .project-sidebar h2:hover {
+    color: #f2b632;
+  }
+
   .project-sidebar p {
     font-family: "Yantramanav";
     font-size: 1em;
     line-height: 100%;
     color: #aaa;
+  }
+
+  .project-sidebar p:hover {
+    color: #000;
   }
 
   .project-content {

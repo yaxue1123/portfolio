@@ -19,8 +19,61 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" href="../Stylesheets/uni-style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Marvel|Text%20Me%20One|Yantramanav">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+ // when the DOM is ready, execute the JQuery code
+ $(document).ready(function () {
+    // --------- Show Back to Top Button ----------
+    let scrollTrigger = 100, // px
+    showBackToTop = function () {
+        let scrollTop = $(window).scrollTop();
+        if (scrollTop > scrollTrigger) {
+            $('#back-to-top').addClass('show');
+        } else {
+            $('#back-to-top').removeClass('show');
+        }
+    };
+
+    $(window).on('scroll', function () {
+        showBackToTop();
+    });
+
+    // ---------- Scroll to position -------
+    // Scroll whole page to top when clicking the button.
+    $('#back-to-top').on('click', function (e) {
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop: 0
+        }, 700);
+    });
+
+    // Scroll to top of user's selection of a project.
+    // When user selects a category.
+    $('.project-sidebar h2').on('click', function (e) {
+        // Create the id of element to be scrolled.
+        let id = $(this).attr("id") + '-scroll';
+        let top = $('#' + id).offset().top;
+        $('html,body').animate({
+            scrollTop: top - 100
+        }, 400);
+    });
+    // When user selects a specific project.
+    $('.project-sidebar p').on('click', function (e) {
+        // Decide which row, 3 items per row.
+        let row = parseInt(($(this).attr("id").split('-')[1] - 1) / 3)+ 1;
+        // Create the id of element to be scrolled.
+        let id = $(this).attr("id").substr(0,2) + '-scroll-' + row;
+        console.log(id);
+        let top = $('#' + id).offset().top;
+        $('html,body').animate({
+            scrollTop: top - 100
+        }, 400);
+    });
+ })
+</script>
+
 </head>
 
 <body>
@@ -64,26 +117,26 @@
 
     <div class="project">
         <div class="project-sidebar">
-            <h2>Web Development</h2>
-            <p>Olaflight web app</p>
-            <p>tourism vis app</p>
-            <p>minesweeper</p>
-            <p>portfolio</p>
-            <p>open video</p>
-            <p>record display</p>
-            <p>photochemcad</p>
-            <p>sunwukong</p>
-            <p>e-commerce platform</p>
-            <h2>Usability & System Analysis</h2>
-            <p>usability evaluation of Sakai calendar</p>
-            <p>personal record management system analysis</p>
-            <h2>Data & Algorithms</h2>
-            <p>last.fm</p>
-            <p>story search engine</p>
-            <p>ADT</p>
+            <h2 id="p1">Web Development</h2>
+            <p id="p1-1">Olaflight web app</p>
+            <p id="p1-2">tourism vis app</p>
+            <p id="p1-3">minesweeper</p>
+            <p id="p1-4">portfolio</p>
+            <p id="p1-5">open video</p>
+            <p id="p1-6">record display</p>
+            <p id="p1-7">photochemcad</p>
+            <p id="p1-8">sunwukong</p>
+            <p id="p1-9">e-commerce platform</p>
+            <h2 id="p2">Usability & System Analysis</h2>
+            <p id="p2-1">usability evaluation of Sakai calendar</p>
+            <p id="p2-2">personal record management system analysis</p>
+            <h2 id="p3">Data & Algorithms</h2>
+            <p id="p3-1">last.fm</p>
+            <p id="p3-2">story search engine</p>
+            <p id="p3-3">ADT</p>
         </div>
         <div class="project-content">
-            <section class="jumbotron text-center">
+            <section class="jumbotron text-center" id="p1-scroll">
                 <div class="container">
                     <h1 class="jumbotron-heading">Web Development</h1>
                     <p class="lead text-muted">
@@ -100,7 +153,7 @@
 
             <div class="album py-5 bg-light">
                 <div class="container">
-                    <div class="row">
+                    <div class="row" id="p1-scroll-1">
                         <div class="col-md-4">
                             <div class="card mb-4 box-shadow">
                                 <img class="card-img-top" src="../Images/project/pj-13.jpeg" alt="Card image cap">
@@ -204,7 +257,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" id="p1-scroll-2">
                         <div class="col-md-4">
                             <div class="card mb-4 box-shadow">
                                 <img class="card-img-top" src="../Images/project/pj-1.jpeg" alt="Card image cap">
@@ -315,7 +368,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" id="p1-scroll-3">
                         <div class="col-md-4">
                             <div class="card mb-4 box-shadow">
                                 <img class="card-img-top" src="../Images/project/pj-11.jpeg" alt="Card image cap">
@@ -425,7 +478,7 @@
             </div>
 
 
-            <section class="jumbotron text-center">
+            <section class="jumbotron text-center" id="p2-scroll">
                 <div class="container">
                     <h1 class="jumbotron-heading">Usability Testing and System Analysis</h1>
                     <p class="lead text-muted">
@@ -443,7 +496,7 @@
 
             <div class="album py-5 bg-light">
                 <div class="container">
-                    <div class="row">
+                    <div class="row" id="p2-scroll-1">
                         <div class="col-md-4">
                             <div class="card mb-4 box-shadow">
                                 <img class="card-img-top" src="../Images/project/pj-7.jpeg" alt="Card image cap">
@@ -522,7 +575,7 @@
                 </div>
             </div>
 
-            <section class="jumbotron text-center">
+            <section class="jumbotron text-center" id="p3-scroll">
                 <div class="container">
                     <h1 class="jumbotron-heading">Data Analysis and Algorithms</h1>
                     <p class="lead text-muted">
@@ -543,7 +596,7 @@
 
             <div class="album py-5 bg-light">
                 <div class="container">
-                    <div class="row">
+                    <div class="row" id="p3-scroll-1">
                         <div class="col-md-4">
                             <div class="card mb-4 box-shadow">
                                 <img class="card-img-top" src="../Images/project/pj-12.jpeg" alt="Card image cap">
@@ -653,7 +706,7 @@
             </div>
         </div>
     </div>
-
+    <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
     <footer>
         <div>
             <ul class="icons">
@@ -685,5 +738,4 @@
     </footer>
     <script src="../Js/all.js"></script>
 </body>
-
 </html>
