@@ -844,7 +844,7 @@ tr:nth-child(even) {
   }
 
   .project-content {
-    margin-left: 5%;
+    margin-left: 0;
     margin-right: 5%;
   }
 

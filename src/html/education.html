@@ -16,8 +16,17 @@
   <link rel="Shortcut Icon" href="../Images/initial.jpg">
   <title>education (っ•̀ω•́)っ✎⁾⁾</title>
   <link rel="stylesheet" href="../Stylesheets/uni-style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Marvel|Text%20Me%20One">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+   // when the DOM is ready, execute the JQuery code
+ $(document).ready(function () {
+   $(".more-less").click(function(e){
+     console.log($(this).attr("id"))
+   })
+ })
+</script>
 </head>
 
 <body>
@@ -64,16 +73,11 @@
       <h2>University of North Carolina, Chapel Hill</h2>
       <h3>Master of Information Science</h3>
       <h4>August 2017 - May 2019</h4>
-      <p>My major is information science. I am passionate about information processing and analysis.This is my second
-        semester
-        at UNC, and I mainly enrolled classes related to both information theory and programming to polish my
-        analytical
-        and coding skills. My ideal career is a data analyst or web developer, and I am working hard right now towards
-        these
-        two goals!
+      <p>My major is information science. I mainly enrolled classes related to both information 
+        theory and programming to polish my analysis and coding skills.
       </p>
-      <p class="more-less">See more »</p>
-      <table id="details1" style="display: none">
+      <p class="more-less" id="course-1">Courses</p>
+      <table id="detail-course-1" style="display: none">
         <thead>
           <tr>
             <th>Semester</th>
