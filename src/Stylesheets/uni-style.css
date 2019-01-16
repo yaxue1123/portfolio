@@ -112,6 +112,15 @@ footer {
   margin:0 auto;
 }
 
+.logo {
+  width: 10em;
+  height: 10em;
+  display: table-cell;
+  vertical-align: middle;
+  border-style: none;
+  margin:0 auto;
+}
+
 img {
     width:100%;
     height:auto;    
@@ -722,7 +731,6 @@ button:focus {
   }
 
 .int-r1, .int-r2, .int-r3, .int-r4, .int-r5{
-    margin-left: 1em;
     margin-top: 2em;
   }
 

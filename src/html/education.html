@@ -19,20 +19,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Marvel|Text%20Me%20One">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script>
-    // when the DOM is ready, execute the JQuery code
-    $(document).ready(function () {
-      // control hide and show effect.
-      $(".more-less").click(function (e) {
-        let id = "detail-" + $(this).attr("id");
-        // if going to show, hide all other showing items first.
-        if ($("#" + id).css("display") == "none") {
-          $(".hide").css("display", "none");
-        }
-        $("#" + id).toggle();
-      })
-    })
-  </script>
 </head>
 
 <body>
@@ -224,11 +210,10 @@
       <h3>Bachelor of E-Commerce, School of Information</h3>
       <h4>September 2013 - June 2017</h4>
       <p>
-        I majored in Electronoc Commerce in CUFE. I learnt coursed in multiple disciplines including business,
+        I majored in Electronic Commerce. I learnt courses in multiple disciplines including business,
         management, computer
         and programming. I not only laid solid foundation of programming including C, Jave, C#, SAS and SQL, but also
-        had
-        a idea of how business and management work in IT field.
+        had a idea of how business and management work in IT field.
       </p>
       <p class="more-less" id="ml-4">GPA</p>
       <p class="more-less" id="ml-5">Courses</p>

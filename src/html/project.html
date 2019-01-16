@@ -22,57 +22,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Marvel|Text%20Me%20One|Yantramanav">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script>
- // when the DOM is ready, execute the JQuery code
- $(document).ready(function () {
-    // --------- Show Back to Top Button ----------
-    let scrollTrigger = 100, // px
-    showBackToTop = function () {
-        let scrollTop = $(window).scrollTop();
-        if (scrollTop > scrollTrigger) {
-            $('#back-to-top').addClass('show');
-        } else {
-            $('#back-to-top').removeClass('show');
-        }
-    };
-
-    $(window).on('scroll', function () {
-        showBackToTop();
-    });
-
-    // ---------- Scroll to position -------
-    // Scroll whole page to top when clicking the button.
-    $('#back-to-top').on('click', function (e) {
-        e.preventDefault();
-        $('html,body').animate({
-            scrollTop: 0
-        }, 700);
-    });
-
-    // Scroll to top of user's selection of a project.
-    // When user selects a category.
-    $('.project-sidebar h2').on('click', function (e) {
-        // Create the id of element to be scrolled.
-        let id = $(this).attr("id") + '-scroll';
-        let top = $('#' + id).offset().top;
-        $('html,body').animate({
-            scrollTop: top - 100
-        }, 400);
-    });
-    // When user selects a specific project.
-    $('.project-sidebar p').on('click', function (e) {
-        // Decide which row, 3 items per row.
-        let row = parseInt(($(this).attr("id").split('-')[1] - 1) / 3)+ 1;
-        // Create the id of element to be scrolled.
-        let id = $(this).attr("id").substr(0,2) + '-scroll-' + row;
-        let top = $('#' + id).offset().top;
-        $('html,body').animate({
-            scrollTop: top - 100
-        }, 400);
-    });
- })
-</script>
-
 </head>
 
 <body>
