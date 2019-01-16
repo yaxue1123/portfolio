@@ -10,6 +10,18 @@ header {
   font-family: 'Text Me One';
 }
 
+.photo-card {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+.card-title-container {
+  text-align: center;
+  padding: 10px 20px;
+}
+
 .project-sidebar {
   display: none;
 }
@@ -289,6 +301,11 @@ h4 {
   color: #fff;
   background-color: #6c757d;
   border-color:#6c757d;
+}
+
+.more-less:hover {
+  background-color: #5a6268;
+  border-color: #545b62;
 }
 /*This is the direct parent of all grid items, which is a container*/
 .wrapper-home {
@@ -659,6 +676,13 @@ button:focus {
 }
 
 @media (min-width: 54em){
+  .photo-card {
+    width: 70%;
+  }
+
+  table {
+    width: 100%;
+  }
   /*-------Back to top--------*/
   #back-to-top {
     display: block;
@@ -758,9 +782,13 @@ button:focus {
 }
 
 table {
-  font-family: 'Courier New', Courier, monospace;
-  width: 100%;
+  margin-top: 1em;
+  width: 85%;
   border-collapse: collapse;
+}
+
+table th {
+    font-family: 'Courier New', Courier, monospace;
 }
 
 td {
