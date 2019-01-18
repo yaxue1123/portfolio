@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109245362-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-109245362-2');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="Shortcut Icon" href="image/other/initial.jpg">
+  <title>homepage</title>
+  <link rel="stylesheet" href="stylesheet/uni-style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="js/all.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Marvel|Text%20Me%20One">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header>
+    <ul class="navitems">
+      <li>
+        <img src="image/other/initial.jpg" alt="Initials">
+      </li>
+      <li>Portfolio of Yaxue</li>
+      <li class="sm-window-nav">
+        <div class="dropdown">
+          <button class="dropbtn">Menu
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="index">Home</a>
+            <a href="project">Project</a>
+            <a href="education">Education</a>
+            <a href="internship">Internship</a>
+            <a href="leadership">Leadership</a>
+          </div>
+        </div>
+      </li>
+      <li class="lg-window-nav">
+        <a href="index">Home</a>
+      </li>
+      <li class="lg-window-nav">
+        <a href="project">Project</a>
+      </li>
+      <li class="lg-window-nav">
+        <a href="education">Education</a>
+      </li>
+      <li class="lg-window-nav">
+        <a href="internship">Internship</a>
+      </li>
+      <li class="lg-window-nav">
+        <a href="leadership">Leadership</a>
+      </li>
+    </ul>
+  </header>
+  <div class="wrapper-home">
+    <div class="intro">
+      <div class="slideshow-container">
+        <div class="slides fade">
+          <picture>
+            <source media="(min-width: 40em)" srcset="image/slide/slide1-large.jpg">
+            <img src="image/slide/slide1-small.jpg" alt="slide1">
+          </picture>
+          <div class="slideshow-caption-container">
+            <h1>I am a quick learner.</h1>
+            <p class="slideshow-text">No matter questions from class, or problems in life, I can always find ways through them quickly. Click
+              and see the problems I've solved!
+            </p>
+            <p>
+              <a class="btn btn-primary" href="project">Learn more</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="slides fade">
+          <picture>
+            <source media="(min-width: 40em)" srcset="image/slide/slide2-large.jpg">
+            <img src="image/slide/slide2-small.jpg" alt="slide2">
+          </picture>
+          <div class="slideshow-caption-container">
+            <h1>I am a hard worker.</h1>
+            <p class="slideshow-text">
+              Even though I haven't had a chance to work full-time before, I have already accumulated
+              abundant internship experience during my school years.
+            </p>
+            <p>
+              <a class="btn btn-primary" href="internship">Learn more</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="slides fade">
+          <picture>
+            <source media="(min-width: 40em)" srcset="image/slide/slide3-large.jpg">
+            <img src="image/slide/slide3-small.jpg" alt="slide3">
+          </picture>
+          <div class="slideshow-caption-container">
+            <h1>I am a supportive leader.</h1>
+            <p class="slideshow-text">
+              Besides a collaborative teamplayer, I have had several opportunities to leverage my
+              leadership skills and trigger engagement from the teams.
+            </p>
+            <p>
+              <a class="btn btn-primary" href="leadership">Learn more</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+        <!-- The dots/circles -->
+        <div class="dot-container">
+          <span class="dot" id="dot-1"></span>
+          <span class="dot" id="dot-2"></span>
+          <span class="dot" id="dot-3"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- The 3 row items: UNC CUFE and TECC-->
+    <div class="row-item1 row-item-uni">
+      <div>
+        <img src="image/logo/logo_unc.jpg" class="rounded-circle" alt="UNC Logo" id="img1">
+      </div>
+
+      <h2>UNC-Chapel Hill</h2>
+      <p>I am a graduate student from UNC Chapel Hill interested in both frontend and backend web design & development.
+        I will be a full-stack web developer upon graduation in May 2019.</p>
+      <p>
+        <a class="btn btn-secondary" href="education">View details</a>
+      </p>
+    </div>
+    <div class="row-item2 row-item-uni">
+      <img class="rounded-circle" src="image/logo/logo_cufe.jpg" alt="CUFE Logo">
+      <h2>CUFE</h2>
+      <p>Majoring in E-Commerce, I learned multi kinds of courses in business, management and computer in
+        undergraduate school. I was class president for 2 years and basketball caption for 1 year.</p>
+      <p>
+        <a class="btn btn-secondary" href="education">View details</a>
+      </p>
+    </div>
+    <div class="row-item3 row-item-uni">
+      <img class="rounded-circle" src="image/logo/logo_chip.jpg" alt="CHIP Logo">
+      <h2>CHIP</h2>
+      <p>
+        I am currently a full-stack web developer intern at Carolina Health Informatics Program, working on
+        builidng a new online learning platform for 2019 HiDav Bootcamp of ENABLE project. 
+      </p>
+      <p>
+        <a class="btn btn-secondary" href="internship">View details</a>
+      </p>
+    </div>
+    <!-- The skill sets: Programming & Language -->
+    <div class="sk-1">
+      <div class="sk-img">
+        <img src="image/other/sk1.jpg" alt="workbench">
+        <h2 class="sk-caption-container">My Workbench</h2>
+      </div>
+      <div class="sk-text">
+        <h2 style="color:#6c757d;margin-top:0">I LOVE DEALING WITH COMPUTER</h2>
+        <p>I have both knowledge and pratical 
+          experience with <em>JavaScript, JQuery, D3, RESTful API, JSON, HTML5, CSS3, Responsive Layout, Mobile-first</em> 
+          regarding the frontend, <em>AJAX, PHP, JAVA, Python, C, SQL</em> regarding the backend, as well as tools including 
+          <em>Git, XAMPP, Terminal, Visual Studio Code, Eclipse, PhpStorm, Docker</em>, etc. Currently I am learning <em>React</em>
+          by myself.
+        </p>
+      </div>
+    </div>
+
+    <div class="sk-2">
+      <div class="sk-text">
+        <h2 style="color:#6c757d;margin-top:0">I AM ALSO GOOD AT COMMUNICATING WITH PEOPLE</h2>
+        <p>As a native speaker of Chinese, I am also fluent in english. I scored 106 in TOEFL and 329 in GRE. 
+          Willingness to communicate with others
+          and master of good communications skills make me an outstanding teamplayer no matter in in-class
+          group projects or works at internship.
+        </p>
+      </div>
+      <div class="sk-img">
+        <img src="image/other/sk2.jpg" alt="TECC Logo">
+        <h2 class="sk-caption-container">
+          Me in Discussion
+        </h2>
+      </div>
+    </div>
+
+    <footer>
+      <div>
+        <ul class="icons">
+          <li>
+            <a href="https://www.linkedin.com/in/yaxue-guo/">
+              <i class="fa fa-linkedin foot-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/yaxue1123">
+              <i class="fa fa-github-square foot-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/guoyaxue/">
+              <i class="fa fa-instagram foot-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/grace.guo.37604">
+              <i class="fa fa-facebook-square foot-icon"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="copyright">
+        © 2019 Yaxue Guo
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
